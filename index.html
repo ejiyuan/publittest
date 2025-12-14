@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="zh-CN"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="utf-8"&gt;</p>
+<p class="p1">&lt;title&gt;宠物食品效价与质量检测平台 2.1 | PFEQT&lt;/title&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">:root{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--green:#6BCF9A; <span class="Apple-converted-space">    </span>/* 草绿色 */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--blue:#8ED3F4;<span class="Apple-converted-space">      </span>/* 淡蓝色 */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--dark:#0E1B2A;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--card:#13283F;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--text:#EAF6FF;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--muted:#A7C7DA;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--line:rgba(255,255,255,.12);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">*{box-sizing:border-box}</p>
+<p class="p1">html{scroll-behavior:smooth}</p>
+<p class="p1">body{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:"PingFang SC","Microsoft YaHei",system-ui;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:linear-gradient(180deg,#08131F,#0E1B2A);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:var(--text);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ====== 导航 ====== */</p>
+<p class="p1">header{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position:fixed;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>top:0;left:0;right:0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:rgba(8,19,31,.85);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>backdrop-filter:blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-bottom:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>z-index:100;</p>
+<p class="p1">}</p>
+<p class="p1">nav{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>max-width:1200px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin:auto;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:14px 20px;</p>
+<p class="p1">}</p>
+<p class="p1">.logo{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight:800;</p>
+<p class="p1">}</p>
+<p class="p1">.logo span{font-size:13px;color:var(--muted)}</p>
+<p class="p1">.menu a{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-left:18px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:14px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:var(--muted);</p>
+<p class="p1">}</p>
+<p class="p1">.menu a:hover{color:var(--blue)}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ====== 区块通用 ====== */</p>
+<p class="p1">section{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:100px 20px 80px;</p>
+<p class="p1">}</p>
+<p class="p1">.container{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>max-width:1200px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin:auto;</p>
+<p class="p1">}</p>
+<p class="p1">h1,h2{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin:0 0 16px;</p>
+<p class="p1">}</p>
+<p class="p1">h2{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:28px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:linear-gradient(90deg,var(--green),var(--blue));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>-webkit-background-clip:text;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:transparent;</p>
+<p class="p1">}</p>
+<p class="p1">p.lead{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>max-width:900px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>line-height:1.8;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ====== 首页 Banner ====== */</p>
+<p class="p1">#home{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>min-height:100vh;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:</p>
+<p class="p1"><span class="Apple-converted-space">    </span>radial-gradient(800px 500px at 20% 20%,rgba(107,207,154,.18),transparent),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>radial-gradient(800px 500px at 80% 30%,rgba(142,211,244,.18),transparent);</p>
+<p class="p1">}</p>
+<p class="p1">.hero h1{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:42px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>line-height:1.2;</p>
+<p class="p1">}</p>
+<p class="p1">.hero p{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>line-height:1.8;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>max-width:800px;</p>
+<p class="p1">}</p>
+<p class="p1">.tags span{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin:8px 8px 0 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:6px 14px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:rgba(255,255,255,.06);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:13px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ====== 卡片 ====== */</p>
+<p class="p1">.grid{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>gap:20px;</p>
+<p class="p1">}</p>
+<p class="p1">.grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}</p>
+<p class="p1">.grid-2{grid-template-columns:repeat(auto-fit,minmax(360px,1fr))}</p>
+<p class="p1">.card{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--card);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:18px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:20px;</p>
+<p class="p1">}</p>
+<p class="p1">.card h3{margin-top:0}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ====== 页脚 ====== */</p>
+<p class="p1">footer{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-top:1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:30px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-align:center;</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;PFEQT&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;宠物食品效价与质量检测平台&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="menu"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#home"&gt;首页&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#about"&gt;关于我们&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#strengths"&gt;平台优势&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#services"&gt;检测服务&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#regulations"&gt;法规标准&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#knowledge"&gt;知识中心&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#system"&gt;在线系统&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#contact"&gt;联系我们&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/nav&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="home"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;宠物食品效价与质量检测平台&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="lead"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>依托农业农村部专业检测机构与中国农业大学科研力量，&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>为宠物食品提供&lt;strong&gt;科学、权威、可验证&lt;/strong&gt;的效价与质量安全检测。</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="tags"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;Pet · 宠物健康&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;Food · 食品安全&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;Efficacy · 效价测试&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;Quality · 质量保障&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;Test · 专业检测&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="about"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;关于我们&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="lead"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>平台由&lt;strong&gt;农业农村部饲料效价与安全检验测试中心（北京）&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>与&lt;strong&gt;中国农业大学动物科学喂养中心&lt;/strong&gt;共同支撑，</p>
+<p class="p1"><span class="Apple-converted-space">      </span>为宠物食品质量安全保驾护航。</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="strengths"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;平台优势&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="grid grid-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;权威技术队伍&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;专业检测与科研团队，全面保障宠物营养与健康。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;标准制定单位&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;生物胺等20余项国家行业标准制定单位。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;强制标准起草&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;国家强制标准《饲料卫生标准》主要起草单位之一。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="services"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;检测服务&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="grid grid-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;效价测试&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;适口性、消化率、生长性能等科学评价。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;质量安全检测&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;营养成分、卫生指标、毒素与非法添加物筛查。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;法规与合规咨询&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;国内外宠物食品法规解读与产品合规支持。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="regulations"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;法规标准&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="grid grid-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;国内法规&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;《饲料和饲料添加剂管理条例》等。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;行业标准&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;生物胺等国家行业检测标准。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;国际标准&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;AAFCO、FEDIAF 等国际规范。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="knowledge"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;知识中心&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="lead"&gt;传播宠物营养与食品安全的科学认知。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="system"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;在线系统&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="lead"&gt;注册登录、样品管理、报告查询、费用支付（系统建设中）。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section id="contact"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;联系我们&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="lead"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>地址：北京市 ×× 区 ×× 路&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>电话：010-XXXX-XXXX&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>邮箱：contact@pfeqt.example</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>© 2025 PFEQT 宠物食品效价与质量检测平台</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
