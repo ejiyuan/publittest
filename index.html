@@ -1,21 +1,275 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <title>宠物食品效价与质量检测平台 2.1 | PFEQT</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      margin: 0;
-      font-family: "PingFang SC","Microsoft YaHei",system-ui;
-      background: #0E1B2A;
-      color: #EAF6FF;
-    }
-    h1 { padding: 40px; }
-  </style>
+<meta charset="utf-8">
+<title>宠物食品效价与质量检测平台 2.1 | PFEQT</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+:root{
+  --green:#6BCF9A;     /* 草绿色 */
+  --blue:#8ED3F4;      /* 淡蓝色 */
+  --dark:#0E1B2A;
+  --card:#13283F;
+  --text:#EAF6FF;
+  --muted:#A7C7DA;
+  --line:rgba(255,255,255,.12);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei",system-ui;
+  background:linear-gradient(180deg,#08131F,#0E1B2A);
+  color:var(--text);
+}
+
+/* ====== 导航 ====== */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(8,19,31,.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  z-index:100;
+}
+nav{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 20px;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+}
+.logo span{font-size:13px;color:var(--muted)}
+.menu a{
+  margin-left:18px;
+  font-size:14px;
+  color:var(--muted);
+}
+.menu a:hover{color:var(--blue)}
+
+/* ====== 区块通用 ====== */
+section{
+  padding:100px 20px 80px;
+}
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+h1,h2{
+  margin:0 0 16px;
+}
+h2{
+  font-size:28px;
+  background:linear-gradient(90deg,var(--green),var(--blue));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+p.lead{
+  color:var(--muted);
+  max-width:900px;
+  line-height:1.8;
+}
+
+/* ====== 首页 Banner ====== */
+#home{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(800px 500px at 20% 20%,rgba(107,207,154,.18),transparent),
+    radial-gradient(800px 500px at 80% 30%,rgba(142,211,244,.18),transparent);
+}
+.hero h1{
+  font-size:42px;
+  line-height:1.2;
+}
+.hero p{
+  font-size:16px;
+  line-height:1.8;
+  max-width:800px;
+}
+.tags span{
+  display:inline-block;
+  margin:8px 8px 0 0;
+  padding:6px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  border:1px solid var(--line);
+  font-size:13px;
+}
+
+/* ====== 卡片 ====== */
+.grid{
+  display:grid;
+  gap:20px;
+}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(360px,1fr))}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:20px;
+}
+.card h3{margin-top:0}
+
+/* ====== 页脚 ====== */
+footer{
+  border-top:1px solid var(--line);
+  padding:30px 20px;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center;
+}
+</style>
 </head>
+
 <body>
-  <h1>宠物食品效价与质量检测平台</h1>
-  <p style="padding:40px">GitHub Pages 正常渲染中 🎉</p>
+
+<header>
+  <nav>
+    <div class="logo">
+      <strong>PFEQT</strong>
+      <span>宠物食品效价与质量检测平台</span>
+    </div>
+    <div class="menu">
+      <a href="#home">首页</a>
+      <a href="#about">关于我们</a>
+      <a href="#strengths">平台优势</a>
+      <a href="#services">检测服务</a>
+      <a href="#regulations">法规标准</a>
+      <a href="#knowledge">知识中心</a>
+      <a href="#system">在线系统</a>
+      <a href="#contact">联系我们</a>
+    </div>
+  </nav>
+</header>
+
+<section id="home">
+  <div class="container hero">
+    <h1>宠物食品效价与质量检测平台</h1>
+    <p class="lead">
+      依托农业农村部专业检测机构与中国农业大学科研力量，<br>
+      为宠物食品提供<strong>科学、权威、可验证</strong>的效价与质量安全检测。
+    </p>
+    <div class="tags">
+      <span>Pet · 宠物健康</span>
+      <span>Food · 食品安全</span>
+      <span>Efficacy · 效价测试</span>
+      <span>Quality · 质量保障</span>
+      <span>Test · 专业检测</span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2>关于我们</h2>
+    <p class="lead">
+      平台由<strong>农业农村部饲料效价与安全检验测试中心（北京）</strong>
+      与<strong>中国农业大学动物科学喂养中心</strong>共同支撑，
+      为宠物食品质量安全保驾护航。
+    </p>
+  </div>
+</section>
+
+<section id="strengths">
+  <div class="container">
+    <h2>平台优势</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>权威技术队伍</h3>
+        <p>专业检测与科研团队，全面保障宠物营养与健康。</p>
+      </div>
+      <div class="card">
+        <h3>标准制定单位</h3>
+        <p>生物胺等20余项国家行业标准制定单位。</p>
+      </div>
+      <div class="card">
+        <h3>强制标准起草</h3>
+        <p>国家强制标准《饲料卫生标准》主要起草单位之一。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2>检测服务</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>效价测试</h3>
+        <p>适口性、消化率、生长性能等科学评价。</p>
+      </div>
+      <div class="card">
+        <h3>质量安全检测</h3>
+        <p>营养成分、卫生指标、毒素与非法添加物筛查。</p>
+      </div>
+      <div class="card">
+        <h3>法规与合规咨询</h3>
+        <p>国内外宠物食品法规解读与产品合规支持。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="regulations">
+  <div class="container">
+    <h2>法规标准</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>国内法规</h3>
+        <p>《饲料和饲料添加剂管理条例》等。</p>
+      </div>
+      <div class="card">
+        <h3>行业标准</h3>
+        <p>生物胺等国家行业检测标准。</p>
+      </div>
+      <div class="card">
+        <h3>国际标准</h3>
+        <p>AAFCO、FEDIAF 等国际规范。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="knowledge">
+  <div class="container">
+    <h2>知识中心</h2>
+    <p class="lead">传播宠物营养与食品安全的科学认知。</p>
+  </div>
+</section>
+
+<section id="system">
+  <div class="container">
+    <h2>在线系统</h2>
+    <p class="lead">注册登录、样品管理、报告查询、费用支付（系统建设中）。</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>联系我们</h2>
+    <p class="lead">
+      地址：北京市 ×× 区 ×× 路<br>
+      电话：010-XXXX-XXXX<br>
+      邮箱：contact@pfeqt.example
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2025 PFEQT 宠物食品效价与质量检测平台
+</footer>
+
 </body>
 </html>
